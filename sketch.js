@@ -34,7 +34,7 @@ function setup() {
 	mango5 = new Mango(670,300,20);
 	stone = new Stone(150,550,20);
 	boyShot = new Shot(stone.body,{x:150,y:500});
-	Engine.run(engine);
+	
   
 }
 
@@ -59,7 +59,7 @@ function draw() {
   detectCollision(stone,mango3);
   detectCollision(stone,mango4);
   detectCollision(stone,mango5);
-  drawSprites();
+ drawSprites()
  
 }
 
@@ -83,7 +83,7 @@ function detectCollision(lstone,lmango){
 function keyPressed(){
 
 	if(keyCode === 32){
-		Matter.Body.setPosition(stone.body,{x:1,y:2})
+		Matter.Body.setPosition(stone.body,{x:150,y:550})
 		boyShot.attach(stone.body);
 	}
 }
